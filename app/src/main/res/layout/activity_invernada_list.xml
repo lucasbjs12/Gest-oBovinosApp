@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8F5E9">
+
+    <!-- Lista -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvInvernadas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:paddingBottom="80dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:indeterminate="true"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"
+        app:layout_anchorGravity="center"/>
+
+    <!-- Botão flutuante -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddInvernada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:contentDescription="Adicionar invernada"
+        app:srcCompat="@drawable/ic_add"
+        app:backgroundTint="#4CAF50"
+        app:tint="@android:color/white"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_anchor="@id/rvInvernadas"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
