@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8F5E9">
+
+    <!-- LOGO -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_boi_logo"
+        android:contentDescription="Logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TÍTULO -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gestão de Rebanho"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1B5E20"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- SUBTÍTULO -->
+    <TextView
+        android:id="@+id/tvSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Controle completo de invernadas e bovinos"
+        android:textColor="#388E3C"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@android:color/white"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <!-- BOTÃO CADASTRAR INVERNADA -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnInvernadas"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Cadastrar Invernada"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="#43A047"
+                android:textColor="@android:color/white"
+                app:icon="@drawable/ic_pasto"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:cornerRadius="14dp"/>
+
+            <!-- BOTÃO CADASTRAR BOVINO -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBovinos"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Cadastrar Bovino"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
+                app:icon="@drawable/ic_cow"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:cornerRadius="14dp"/>
+
+            <!-- BOTÃO LEITURAS RFID -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLeituras"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Leituras RFID"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#66BB6A"
+                android:textColor="@android:color/white"
+                app:icon="@drawable/ic_antenna"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:cornerRadius="14dp"/>
+
+            <!-- BOTÃO EVENTOS SANITÁRIOS -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEventos"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Eventos Sanitários"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#81C784"
+                android:textColor="@android:color/white"
+                app:icon="@drawable/ic_vaccine"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:cornerRadius="14dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- FOOTER -->
+    <TextView
+        android:id="@+id/tvRodape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© 2025 TCC | Acadêmico: Lucas Borges Ribeiro"
+        android:textColor="#558B2F"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="12dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
